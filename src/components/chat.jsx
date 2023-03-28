@@ -13,9 +13,11 @@ export function Chat({chatList}) {
     return (
         <div className="flex flex-col overflow-auto navbar">
             {
-                chatList.map((chat, count) => (
-                    <ChatBubble key={count} text={chat.text} isUser={chat.isUser} className={chat.isUser ? 'self-start' : 'self-end'}></ChatBubble>
-                ))
+                chatList.map((chat, count) => 
+                    chat !== null ? <>
+                        <ChatBubble key={count} text={chat.text} isUser={chat.isUser} className={chat.isUser ? 'self-start' : 'self-end'}></ChatBubble>
+                    </> : null
+                )
             }
             <div ref={bottomRef}></div>
         </div>

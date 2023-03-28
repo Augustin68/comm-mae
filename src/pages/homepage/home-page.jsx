@@ -1,8 +1,12 @@
+import { getDatabase, onValue, ref, set } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { Chat } from '../../components/chat';
+import { firebaseApp } from '../../firebase';
 import './home-page.css';
 
+
 export const HomePage = () => {
+
 
     const [chatList, setChatList] = useState([
         {
@@ -21,30 +25,42 @@ export const HomePage = () => {
             isTyping: false,
         },
     ]);
+    const [nextChat, setNextChat] = useState('');
 
-    const [nextChat, setNextChat] = useState("");
+    
+    useEffect(() => {
+        const db = getDatabase(firebaseApp);
+        const chatRef = ref(db, 'chat');
+        onValue(chatRef, (snapshot) => {
+            const data = snapshot.val();
+            setChatList((prevChatList) => [...prevChatList, {
+                ...data,
+                isUser: false,
+            }]);
+
+        });
+    }, []);
 
     useEffect(() => {
+        const db = getDatabase(firebaseApp);
+
         const handleKeyPress = (e) => {
             if (e.key === 'Enter' && nextChat !== '') {
-                setChatList((prevChatList) => [
-                    ...prevChatList,
-                    { text: nextChat, isUser: true, isTyping: false },
-                ]);
+                const newMessage = {text: nextChat};
                 setNextChat('');
+                set(ref(db, 'chat'), newMessage);
                 return;
             }
-
+    
             setNextChat((prevNextChat) => prevNextChat + e.key);
         };
 
         document.addEventListener('keypress', handleKeyPress);
-
-        // Clean up the event listener when the component is unmounted or updated
         return () => {
             document.removeEventListener('keypress', handleKeyPress);
         };
     }, [nextChat]);
+
 
 
     return (
