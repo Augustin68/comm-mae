@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         'aqua': ['Aqua', 'sans-serif'],
         'rubik': ['Rubik', 'sans-serif'],
+        'manrope': ['Manrope', 'sans-serif'],
+      },
+      maxWidth: {
+        '1/2': '50%',
       }
     },
     colors: {
