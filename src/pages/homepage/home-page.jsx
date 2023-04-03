@@ -1,8 +1,8 @@
 import { getDatabase, onValue, ref, set } from 'firebase/database';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Chat } from '../../components/chat';
 import { firebaseApp } from '../../firebase';
-import './home-page.css';
 
 
 export const HomePage = () => {
@@ -74,11 +74,10 @@ export const HomePage = () => {
                         <p className='font-aqua font-normal lg:text-3xl text-2xl break-words'>La communication, c'est l'action de communiquer, de transmettre, d'informer.</p>
                     </div>
                 </div>
-                <div className="group w-36 h-36 hover:scale-105 ease-in-out duration-200 flex items-center justify-center border border-slate-500 hover:border-slate-600 hover:drop-shadow-lg
-
+                <Link to={"/library"} className="group w-36 h-36 hover:scale-105 ease-in-out duration-200 flex items-center justify-center border border-slate-500 hover:border-slate-600 hover:drop-shadow-lg
  rounded-full  cursor-pointer shrink-0">
                     <p className='font-rubik font-bold ease-in-out duration-200 text-slate-500 group-hover:text-slate-600 text-xl text-center'>Enter the library</p>
-                </div>
+                </Link>
 
             </div>
         </div>
