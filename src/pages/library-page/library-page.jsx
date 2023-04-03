@@ -25,7 +25,7 @@ export function LibraryPage() {
             <div className="w-11/12 h-3/4 flex flex-row justify-between items-center gap-8">
                 {
                     books.map((book, index) => (
-                        <div key={index} className="py-5 px-3 cursor-pointer flex flex-col shadow-sm justify-between items-center h-full bg-banana-blue-500 hover:bg-banana-blue-400 grow w-12">
+                        <div key={index} className="py-5 px-3 cursor-pointer flex flex-col drop-shadow-lg hover:drop-shadow-2xl justify-between items-center h-full bg-banana-blue-500 hover:bg-banana-blue-400 hover:translate-y-5  ease-out duration-300 grow w-12">
                             <p className="book-text m-auto rotate-180 text-pale-100 text-3xl font-bold">{book}</p>
                             <img className='w-11/12 h-7' src={codebare} alt="" />
                         </div>
