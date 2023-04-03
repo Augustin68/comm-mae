@@ -2,7 +2,6 @@ import { getDatabase, onValue, ref, set } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { Chat } from '../../components/chat';
 import { firebaseApp } from '../../firebase';
-import './home-page.css';
 
 
 export const HomePage = () => {

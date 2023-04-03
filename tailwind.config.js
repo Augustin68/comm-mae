@@ -19,6 +19,8 @@ module.exports = {
     colors: {
       'custom-orange-400': '#fead65',
       'custom-orange-100': '#e5b8ae',
+      'banana-blue-500': '#112A46',
+      'banana-blue-400': '#0d2138',
       'pale-100': '#f3dbd6',
       'black': colors.black,
       'white': colors.white,

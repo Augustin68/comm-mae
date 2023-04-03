@@ -4,7 +4,7 @@ import './App.css';
 import { Navbarre } from './components/navbarre/navbarre';
 import { CalendarPage } from './pages/calendar-page';
 import { HomePage } from './pages/homepage/home-page';
-import { LibraryPage } from './pages/library-page';
+import { LibraryPage } from './pages/library-page/library-page';
 
 function App() {
   return (
