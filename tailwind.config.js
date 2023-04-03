@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -31,5 +32,15 @@ module.exports = {
       'slate': colors.slate,
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      addUtilities({
+        '.writing-vertical-rl' : {
+          'writing-mode': 'vertical-rl',
+          'text-orientation': 'mixed',
+        }
+
+      })
+    })
+  ]
 }
