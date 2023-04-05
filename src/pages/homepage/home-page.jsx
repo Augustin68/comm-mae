@@ -1,71 +1,12 @@
-import { getDatabase, onValue, ref, set } from 'firebase/database';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Chat } from '../../components/chat';
-import { firebaseApp } from '../../firebase';
+import { Chat } from '../../components/chat/chat';
 
 
 export const HomePage = () => {
 
-
-    const [chatList, setChatList] = useState([
-        {
-            text: "Chat numéro 1 j'explose de rire a tes souhaits",
-            isUser: true,
-            isTyping: false,
-        },
-        {
-            text: "Chat numéro 2 j'explose de rire a tes souhaits",
-            isUser: false,
-            isTyping: false,
-        },
-        {
-            text: "Chat numéro 3 j'explose de rire a tes souhaits",
-            isUser: true,
-            isTyping: false,
-        },
-    ]);
-    const [nextChat, setNextChat] = useState('');
-
-    
-    useEffect(() => {
-        const db = getDatabase(firebaseApp);
-        const chatRef = ref(db, 'chat');
-        onValue(chatRef, (snapshot) => {
-            const data = snapshot.val();
-            setChatList((prevChatList) => [...prevChatList, {
-                ...data,
-                isUser: false,
-            }]);
-
-        });
-    }, []);
-
-    useEffect(() => {
-        const db = getDatabase(firebaseApp);
-
-        const handleKeyPress = (e) => {
-            if (e.key === 'Enter' && nextChat !== '') {
-                const newMessage = {text: nextChat};
-                setNextChat('');
-                set(ref(db, 'chat'), newMessage);
-                return;
-            }
-    
-            setNextChat((prevNextChat) => prevNextChat + e.key);
-        };
-
-        document.addEventListener('keypress', handleKeyPress);
-        return () => {
-            document.removeEventListener('keypress', handleKeyPress);
-        };
-    }, [nextChat]);
-
-
-
     return (
         <div className="flex flex-col bg-pale-100 h-screen sm:p-20 p-5 pl-32 max-w-full justify-between">
-            <Chat chatList={chatList}></Chat>
+            <Chat></Chat>
             <div className='flex max-lg:flex-col gap-10 justify-between items-center'>
                 <div className='flex flex-col gap-9 max-w-full'>
                     <h1 className='lg:text-8xl text-6xl font-aqua font-normal break-all'>communication</h1>
