@@ -59,7 +59,7 @@ export function Chat() {
                 return;
             }
 
-            if(!chatService.isCharacterAuthorized(e.key)) return
+            if(!chatService.isCharacterAuthorized(e.key) || nextChat.length >= 125) return
     
             setNextChat((prevNextChat) => prevNextChat + e.key);
         };

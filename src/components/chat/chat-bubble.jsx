@@ -14,7 +14,7 @@ export function ChatBubble({text, isUser, isTyping, userUUID}) {
             ></div>
         </div>
         <div className={`border border-black p-2 m-0 relative ${isTyping ? 'border-slate-400' : null}`}>
-            <p className={`text-${isUser ? 'end' : 'start'} font-manrope text-2xl ${isTyping ? 'text-slate-400' : null}`}>{text}</p>
+            <p className={`text-${isUser ? 'end' : 'start'} break-words font-manrope text-2xl ${isTyping ? 'text-slate-400' : null}`}>{text}</p>
         </div>
         <div className="flex flex-col gap-1">
             <div className={`border border-black rounded-tr-2xl h-full w-3 border-l-0 ${isTyping ? 'border-slate-400' : null}`}></div>
