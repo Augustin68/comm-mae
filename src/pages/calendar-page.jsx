@@ -20,15 +20,16 @@ export function CalendarPage() {
     return (
         <div className='bg-pale-100 h-screen w-screen flex justify-center items-center'>
             <div className="grid grid-rows-2 h-full w-full">
-                <div className="border border-black flex justify-center items-center">
-                    {user ? 
+                <div className="flex justify-center items-center">
+                    <CalendarChat selectedDate={selectedDate} user={user} />
+                    {/* {user ? 
                         <CalendarChat selectedDate={selectedDate} user={user} />
                         : 
                         <SignIn />
-                    }
-                    <SignOut />
+                    } */}
+                    {/* <SignOut /> */}
                 </div>
-                <div className="border border-black flex justify-center items-center">
+                <div className="flex justify-center items-center">
                     <Calendar onDateClick={setSelectedDate}></Calendar>
                 </div>
             </div>

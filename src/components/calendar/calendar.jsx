@@ -3,14 +3,14 @@ import './calendar.css'
 function CalendarTile({monthDay, onDateClick}) {
     return (
         <td onClick={() => onDateClick(monthDay)} className="w-20 h-11 leading-10 text-left border-l border-black align-top ease-in duration-100">
-            <p>{monthDay.toString()}</p>
+            <p className={onDateClick ? 'hover:text-white cursor-pointer' : 'null'}>{monthDay.toString()}</p>
         </td>
     )
 }
 
 export default function Calendar({ onDateClick }) {
     return (
-        <div className="stendig flex">
+        <div className="stendig flex font-helvetica">
                 <div className='text-3xl gap-7'>
                     <h2 className="year writing-vertical-rl rotate-180">2023</h2>
                     <h2 className="month writing-vertical-rl rotate-180">December</h2>

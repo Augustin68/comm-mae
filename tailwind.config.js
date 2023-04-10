@@ -22,6 +22,7 @@ module.exports = {
         'aqua': ['Aqua', 'sans-serif'],
         'rubik': ['Rubik', 'sans-serif'],
         'manrope': ['Manrope', 'sans-serif'],
+        'helvetica': ['HelveticaNeue', 'sans-serif'],
       },
       maxWidth: {
         '1/2': '50%',
