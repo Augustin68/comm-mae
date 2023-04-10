@@ -17,16 +17,43 @@
   src: url("./assets/fonts/Manrope-VariableFont_wght.ttf");
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  /* :root {
+    --color-text-base: #000000;
+    --color-text-base-hover: #313131;
+    --color-text-primary: #f3dbd6;
+    --color-fill-primary: #f3dbd6;
+    --color-fill-secondary: #112A46;
+    --color-fill-secondary-hover: #0d2138;
+    --color-fill-base: #fead65;
+    --color-fill-muted: #e5b8ae;
+    --color-border-primary: #000000;
+    --color-border-primary-hover: #313131;
+  } */
+  .themeOne {
+    --color-text-base: #112a46;
+    --color-text-base-hover: #061424;
+    --color-text-primary: #7B79AF;
+    --color-fill-primary: #7B79AF;
+    --color-fill-secondary: #9ADBBC;
+    --color-fill-secondary-hover: #80d4ac;
+    --color-fill-base: 255, 255, 255;
+    --color-fill-muted: #b4b3d1;
+    --color-border-primary: #112A46;
+    --color-border-primary-hover: #061424;
+    --color-border-base: #ffffff;
+  }
+  .themeTwo {
+    --color-text-base: #ffffff;
+    --color-text-base-hover: #d2d2d2b1;
+    --color-text-primary: #38369D;
+    --color-fill-primary: #38369D;
+    --color-fill-secondary: #EF7A85;
+    --color-fill-secondary-hover: #ff8285;
+    --color-fill-base: 255, 255, 255;
+    --color-fill-muted: #b4b3d1;
+    --color-border-primary: #ffffff;
+    --color-border-primary-hover: #d2d2d2b1;
+    --color-border-base: #ffffff;
+  }
 }

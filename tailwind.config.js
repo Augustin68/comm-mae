@@ -2,6 +2,16 @@
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
+const withOpacity = (variableName) => {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`
+    }
+    return `rgb(var(${variableName}))`
+  }
+}
+
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -15,6 +25,29 @@ module.exports = {
       },
       maxWidth: {
         '1/2': '50%',
+      },
+      textColor: {
+        skin: {
+          base: 'var(--color-text-base)',
+          'base-hover': 'var(--color-text-base-hover)',
+          primary: 'var(--color-text-primary)',
+        }
+      },
+      backgroundColor: {
+        skin: {
+          primary: 'var(--color-fill-primary)',
+          secondary: 'var(--color-fill-secondary)',
+          'secondary-hover': 'var(--color-fill-secondary-hover)',
+          base: withOpacity('--color-fill-base'),
+          muted: 'var(--color-fill-muted)',
+        }
+      },
+      borderColor: {
+        skin: {
+          primary: 'var(--color-border-primary)',
+          'primary-hover': 'var(--color-border-primary-hover)',
+          base: 'var(--color-border-base)'
+        }
       }
     },
     colors: {
