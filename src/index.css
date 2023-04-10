@@ -18,18 +18,6 @@
 }
 
 @layer base {
-  :root {
-    --color-text-base: #000000;
-    --color-text-base-hover: #313131;
-    --color-text-primary: #f3dbd6;
-    --color-fill-primary: #f3dbd6;
-    --color-fill-secondary: #112A46;
-    --color-fill-secondary-hover: #0d2138;
-    --color-fill-base: #fead65;
-    --color-fill-muted: #e5b8ae;
-    --color-border-primary: #000000;
-    --color-border-primary-hover: #313131;
-  }
   .themeOne {
     --color-text-base: #112a46;
     --color-text-base-hover: #061424;
