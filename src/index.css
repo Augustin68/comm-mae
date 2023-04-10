@@ -18,7 +18,7 @@
 }
 
 @layer base {
-  /* :root {
+  :root {
     --color-text-base: #000000;
     --color-text-base-hover: #313131;
     --color-text-primary: #f3dbd6;
@@ -29,7 +29,7 @@
     --color-fill-muted: #e5b8ae;
     --color-border-primary: #000000;
     --color-border-primary-hover: #313131;
-  } */
+  }
   .themeOne {
     --color-text-base: #112a46;
     --color-text-base-hover: #061424;
@@ -50,6 +50,45 @@
     --color-fill-primary: #38369D;
     --color-fill-secondary: #EF7A85;
     --color-fill-secondary-hover: #ff8285;
+    --color-fill-base: 255, 255, 255;
+    --color-fill-muted: #b4b3d1;
+    --color-border-primary: #ffffff;
+    --color-border-primary-hover: #d2d2d2b1;
+    --color-border-base: #ffffff;
+  }
+  .themeThree { 
+    --color-text-base: #ffffff;
+    --color-text-base-hover: #d2d2d2b1;
+    --color-text-primary: #63128A;
+    --color-fill-primary: #63128A;
+    --color-fill-secondary: #AFBEFB;
+    --color-fill-secondary-hover: #677fdf;
+    --color-fill-base: 255, 255, 255;
+    --color-fill-muted: #b4b3d1;
+    --color-border-primary: #ffffff;
+    --color-border-primary-hover: #d2d2d2b1;
+    --color-border-base: #ffffff;
+  }
+  .themeFour { 
+    --color-text-base: #ffffff;
+    --color-text-base-hover: #d2d2d2b1;
+    --color-text-primary: #4188F1;
+    --color-fill-primary: #4188F1;
+    --color-fill-secondary: #000000;
+    --color-fill-secondary-hover: #2c2c2c;
+    --color-fill-base: 255, 255, 255;
+    --color-fill-muted: #b4b3d1;
+    --color-border-primary: #ffffff;
+    --color-border-primary-hover: #d2d2d2b1;
+    --color-border-base: #ffffff;
+  }
+  .themeFive { 
+    --color-text-base: #ffffff;
+    --color-text-base-hover: #d2d2d2b1;
+    --color-text-primary: #FFD447;
+    --color-fill-primary: #FFD447;
+    --color-fill-secondary: #D76DD2;
+    --color-fill-secondary-hover: #b82fb1;
     --color-fill-base: 255, 255, 255;
     --color-fill-muted: #b4b3d1;
     --color-border-primary: #ffffff;

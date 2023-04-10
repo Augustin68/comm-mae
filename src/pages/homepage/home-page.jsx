@@ -5,7 +5,7 @@ import { Chat } from '../../components/chat/chat';
 export const HomePage = () => {
 
     return (
-        <div className="themeTwo flex flex-col bg-skin-secondary h-screen sm:p-20 p-5 pl-32 max-w-full justify-between">
+        <div className="flex flex-col bg-skin-secondary h-screen sm:p-20 p-5 pl-32 max-w-full justify-between">
             <Chat></Chat>
             <div className='flex max-lg:flex-col gap-10 justify-between items-center'>
                 <div className='flex flex-col gap-9 max-w-full'>

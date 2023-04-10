@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 
-const TmeContext = createContext();
+export const ThemeContext = createContext(null);
 
-export default function ThemeContext({ children }) {
+export function ThemeContextProvider({ children }) {
     const [theme, setTheme] = useState('themeOne');
 
     const defaultContext = {
@@ -11,8 +11,10 @@ export default function ThemeContext({ children }) {
     };
 
     return (
-        <TmeContext.Provider value={defaultContext}>
-            {children}
-        </TmeContext.Provider>
+        <ThemeContext.Provider value={defaultContext}>
+            <div className={`${theme}`}>
+                {children}
+            </div>
+        </ThemeContext.Provider>
     )
 }
