@@ -1,0 +1,33 @@
+  
+  .stendig {
+    font-weight: 900;
+    width: 520px;
+    margin: auto;
+    top: -44px;
+  }
+  
+  .stendig .year {
+    left: 288px;
+  }
+  
+  .stendig .month {
+    left: 360px;
+  }
+  
+  .stendig table {
+    width: 504px;
+    font-size: 56px;
+    border-spacing: 0;
+  }
+  
+  
+  .stendig table td {
+    width: 72px;
+    height: 44px;
+    line-height: 40px;
+    text-align: left;
+    border-left: 1px solid #000;
+    vertical-align: top;
+    transition: color 300ms ease-in;
+    letter-spacing: -5px;
+  }

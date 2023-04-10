@@ -1,74 +1,59 @@
-import './calendar-page.css'
+import { useState } from "react";
+import Calendar from "../components/calendar/calendar";
 
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { firebaseApp } from "../firebase";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import CalendarChat from "../components/calendar/calendar-chat";
+
+const auth = getAuth(firebaseApp)
 export function CalendarPage() {
+
+
+    const [selectedDate, setSelectedDate] = useState(null);
+
+    const [user] = useAuthState(auth)
+
     return (
-        <div className='bg-pale-100 h-screen w-screen'>
-            <div className="stendig flex">
-                <div className='text-3xl gap-7'>
-                    <h2 className="year writing-vertical-rl rotate-180">2014</h2>
-                    <h2 className="month writing-vertical-rl rotate-180">October</h2>
+        <div className='bg-pale-100 h-screen w-screen flex justify-center items-center'>
+            <div className="grid grid-rows-2 h-full w-full">
+                <div className="border border-black flex justify-center items-center">
+                    {user ? 
+                        <CalendarChat selectedDate={selectedDate} user={user} />
+                        : 
+                        <SignIn />
+                    }
+                    <SignOut />
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>M</td>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>T</td>
-                            <td>F</td>
-                            <td>S</td>
-                            <td>S</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td className="k10">10</td>
-                            <td className="k13">11</td>
-                            <td className="k10">12</td>
-                        </tr>
-                        <tr>
-                            <td className="k10">13</td>
-                            <td className="k10">14</td>
-                            <td className="k10">15</td>
-                            <td className="k10">16</td>
-                            <td className="k10">17</td>
-                            <td className="k10">18</td>
-                            <td className="k10">19</td>
-                        </tr>
-                        <tr>
-                            <td className="k3">20</td>
-                            <td>21</td>
-                            <td className="k3">22</td>
-                            <td className="k3">23</td>
-                            <td>24</td>
-                            <td>25</td>
-                            <td>26</td>
-                        </tr>
-                        <tr>
-                            <td>27</td>
-                            <td className="k3">28</td>
-                            <td className="k3">29</td>
-                            <td className="k3">30</td>
-                            <td className="k10">31</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="border border-black flex justify-center items-center">
+                    <Calendar onDateClick={setSelectedDate}></Calendar>
+                </div>
             </div>
+        </div>
+    )
+}
+
+export function SignOut() {
+    return auth.currentUser && (
+        <button onClick={() => auth.signOut()}>Sign Out</button>
+    )
+}
+
+export function SignIn() {
+
+    const loginWithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        
+        signInWithPopup(auth, provider);
+    }
+
+    return (
+        <div className="w-10/12 flex justify-center items-center flex-col">
+            <p>Vous devez vous connecter pour ajouter des élements dans le calendrier</p>
+            <button onClick={loginWithGoogle}>Se connecter</button>
         </div>
     )
 }

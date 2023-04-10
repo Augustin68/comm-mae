@@ -21,7 +21,6 @@ export function LibraryPage() {
                         </Link>
                     ))
                 }
-                <div></div>
             </div>
         </div>
     )
