@@ -6,12 +6,13 @@ import { CalendarPage } from './pages/calendar-page';
 import { HomePage } from './pages/homepage/home-page';
 import { libraryBooks } from './pages/library-page/library-books';
 import { LibraryPage } from './pages/library-page/library-page';
-import { CulturalPlacePage } from './pages/library/cultural-places/cultural-place-page';
+import ThemeContext from './providers/ThemeContext';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+          <ThemeContext>
             <Navbarre></Navbarre>
             <Routes>
               <Route path="/" element={<HomePage></HomePage>}></Route>
@@ -25,6 +26,7 @@ function App() {
               </Route>
               <Route path="calendar" element={<CalendarPage></CalendarPage>}></Route>
             </Routes>
+          </ThemeContext>
       </BrowserRouter>
     </>
     
