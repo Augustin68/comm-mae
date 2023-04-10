@@ -18,14 +18,23 @@ export default function SwitchThemeButton() {
     const [themeIdx, setThemeIdx] = useState(0)
 
     useEffect(() => {
+
+        const userTheme = localStorage.getItem('theme')
+        if (userTheme) {
+            setTheme(userTheme)
+        } else {
+            setTheme(themeList[0])
+            localStorage.setItem('theme', themeList[0])
+        }
+
         setThemeIdx(themeList.indexOf(theme) || 0);
-    }, [theme, themeList])
+    }, [theme, themeList, setTheme])
 
     const onThemeSwitch = () => {
         const nextThemeIdx = (themeIdx + 1) % themeList.length
-        console.log("nextThemeIdx: ", nextThemeIdx)
         setThemeIdx(nextThemeIdx)
         setTheme(themeList[nextThemeIdx])
+        localStorage.setItem('theme', themeList[nextThemeIdx])
     }
 
     return (
