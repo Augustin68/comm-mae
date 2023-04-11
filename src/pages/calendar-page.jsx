@@ -18,7 +18,7 @@ export function CalendarPage() {
     const [user] = useAuthState(auth)
 
     return (
-        <div className='bg-pale-100 h-screen w-screen flex justify-center items-center'>
+        <div className='bg-skin-primary h-screen w-screen flex justify-center items-center'>
             <div className="grid grid-rows-2 h-full w-full">
                 <div className="flex justify-center items-center">
                     <CalendarChat selectedDate={selectedDate} user={user} />

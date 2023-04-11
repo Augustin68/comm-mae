@@ -53,13 +53,13 @@ export default function CalendarChat({ selectedDate }) {
                     ?  
                     <div className="flex grow items-center gap-4">
                         <p className="font-bold text-4xl">Décembre</p>
-                        <div className="h-full"></div>
+                        <div className="h-full border border-black"></div>
                         <p className=" font-bold text-8xl">{selectedDate}</p>
                     </div>
                     :
                     <p className="font-bold text-4xl mr-10">Sélectionnez une date</p>
                }
-                <form className="grow-[10] flex flex-col items-end" onSubmit={(e) => sendChat(e)}>
+                <form className="grow-[10] gap-3 flex flex-col items-end mt-10" onSubmit={(e) => sendChat(e)}>
                     <input rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Write your thoughts here..."
                         value={chatValue} onChange={(e) => setChatValue(e.target.value)} 
