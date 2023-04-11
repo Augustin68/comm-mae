@@ -10,20 +10,10 @@ export function Chat() {
 
     const [chatList, setChatList] = useState([
         {
-            text: "Chat numéro 1 j'explose de rire a tes souhaits",
+            text: "Bonjour, comment allez vous ?",
             isUser: true,
             isTyping: false,
-        },
-        {
-            text: "Chat numéro 2 j'explose de rire a tes souhaits",
-            isUser: false,
-            isTyping: false,
-        },
-        {
-            text: "Chat numéro 3 j'explose de rire a tes souhaits",
-            isUser: true,
-            isTyping: false,
-        },
+        }
     ]);
     const [nextChat, setNextChat] = useState('');
 
