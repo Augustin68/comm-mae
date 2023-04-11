@@ -22,6 +22,11 @@
   src: url("./assets/fonts/Helvetica_Neue_Regular.otf");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+}
+
 
 @layer base {
   .themeOne {

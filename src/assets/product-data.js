@@ -6,7 +6,7 @@ export const productData = [
       "category": LibraryCategories.CULTURAL_PLACES,
       "name": "Comment designer un ticket de festival ?",
       "description": "Tips pour créer son ticket de festival",
-      "picture": "ticket_festival.jpg"
+      "picture": "ticket_festival.png"
     },
     {
       "categoryIndex": 2,
@@ -64,7 +64,7 @@ export const productData = [
       "name": "Un annuaire complet personnalisé",
       "category": LibraryCategories.SERVICES,
       "description": "L'annuiare de tous les services à coté de chez soi, personnalisé et personnalisable",
-      "picture": "yellow-pages-phone-directory-AWTGCY.jpg"
+      "picture": "yellow-pages-phone-directory-AWTGCY.png"
     },
     {
       "categoryIndex": 3,
@@ -85,7 +85,7 @@ export const productData = [
       "name": "Calendrier perpétuel",
       "category": LibraryCategories.SERVICES,
       "description": "Un calendrier perpetuel, universel",
-      "picture": "calendrier_universel_grégorien_.jpg"
+      "picture": "calendrier_universel_grégorien.jpg"
     },  
     {
       "categoryIndex":6,

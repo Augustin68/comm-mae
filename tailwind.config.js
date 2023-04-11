@@ -23,6 +23,7 @@ module.exports = {
         'rubik': ['Rubik', 'sans-serif'],
         'manrope': ['Manrope', 'sans-serif'],
         'helvetica': ['HelveticaNeue', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       maxWidth: {
         '1/2': '50%',
