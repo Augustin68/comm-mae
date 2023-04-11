@@ -22,68 +22,55 @@ export const LibraryCategories = {
 
 export const libraryBooks = [
     {
-        title: LibraryCategories.SERVICES,
-        url: "services",
-        page: null,
+        id: LibraryCategories.SERVICES,
+        customClass: "font-aqua"        
     },
     {
-        title: LibraryCategories.CULTURAL_PLACES,
-        url: "lieux-culturels",
-        page: <CulturalPlacePage/>,
+        id: LibraryCategories.CULTURAL_PLACES,
+        customClass: "font-Preahvihear"        
     },
     {
-        title: LibraryCategories.EXCHANGES,
-        url: "echangfffes",
-        page: <ExchangesPage/>,
+        id: LibraryCategories.EXCHANGES,
+        customClass: "font-coanda "        
     },
     {
-        title: LibraryCategories.GAMES,
-        url: "jeux",
-        page: <GamesPage/>,
+        id: LibraryCategories.GAMES,
+        customClass: "font-Aleo"        
     },
     {
-        title: LibraryCategories.TECHNOLOGY,
-        url: "technologies",
-        page: <TechnologyPage/>,
+        id: LibraryCategories.TECHNOLOGY,
+        customClass: "font-Orbitron"        
     },
     {
-        title: LibraryCategories.EDUCATION,
-        url: "education",
-        page: null,
+        id: LibraryCategories.EDUCATION,
+        customClass: "font-Cambo"        
     },
     {
-        title: LibraryCategories.WRITINGS,
-        url: "ecrits",
-        page: null,
+        id: LibraryCategories.WRITINGS,
+        customClass: "font-NATS"        
     },
     {
-        title: LibraryCategories.PROFESSIONS,
-        url: "professions",
-        page: null,
+        id: LibraryCategories.PROFESSIONS,
+        customClass: "font-manrope"        
     },
     {
-        title: LibraryCategories.TOOLS,
-        url: "outils",
-        page: null,
+        id: LibraryCategories.TOOLS,
+        customClass: "font-Mogra"        
     },
     {
-        title: LibraryCategories.VERBAL,
-        url: "verbale",
-        page: null,
+        id: LibraryCategories.VERBAL,
+        customClass: "font-manrope"        
     },
     {
-        title: LibraryCategories.SOCIAL_NETWORKS,
-        url: "reseaux-sociaux",
-        page: null,
+        id: LibraryCategories.SOCIAL_NETWORKS,
+        customClass: "font-manrope"        
     },
     {
-        title: LibraryCategories.NON_VERBAL,
-        url: "non-verbale",
-        page: <NonVerbalPage/>,
+        id: LibraryCategories.NON_VERBAL,
+        customClass: "font-manrope"        
     },
     {
-        title: LibraryCategories.VISUAL_COMMUNICATION,
-        url: "communication-visuelle",
-        page: null,
+        id: LibraryCategories.VISUAL_COMMUNICATION,
+        customClass: "font-manrope"        
     }
 ]

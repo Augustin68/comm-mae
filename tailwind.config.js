@@ -24,6 +24,13 @@ module.exports = {
         'manrope': ['Manrope', 'sans-serif'],
         'helvetica': ['HelveticaNeue', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'coanda': ['Coanda', 'sans-serif'],
+        'Preahvihear': ['Preahvihear', 'sans-serif'],
+        'Orbitron': ['Orbitron', 'sans-serif'],
+        'Aleo': ['Aleo', 'sans-serif'],
+        'Cambo': ['Cambo', 'sans-serif'],
+        'NATS': ['NATS', 'sans-serif'],
+        'Mogra': ['Mogra', 'sans-serif'],
       },
       maxWidth: {
         '1/2': '50%',

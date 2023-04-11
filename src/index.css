@@ -27,6 +27,41 @@
   src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 }
 
+@font-face {
+  font-family: "Coanda";
+  src: url("https://fonts.googleapis.com/css2?family=Coanda&display=swap");
+}
+
+@font-face {
+  font-family: "Preahvihear";
+  src: url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+}
+
+@font-face {
+  font-family: "Aleo";
+  src: url("https://fonts.googleapis.com/css2?family=Aleo&display=swap");
+}
+
+@font-face {
+  font-family: "Cambo";
+  src: url("https://fonts.googleapis.com/css2?family=Cambo&display=swap");
+}
+
+@font-face {
+  font-family: "NATS";
+  src: url("https://fonts.googleapis.com/css2?family=NATS&display=swap");
+}
+
+@font-face {
+  font-family: "Mogra";
+  src: url("https://fonts.googleapis.com/css2?family=Mogra&display=swap");
+}
+
 
 @layer base {
   .themeOne {
