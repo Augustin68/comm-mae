@@ -10,7 +10,7 @@ export function ProductPage({category}) {
                     productData.filter((product) => product.category === category).map((product, index) => (
                         <ProductCard 
                             key={index}
-                            idx={index}
+                            idx={product.categoryIndex}
                             name={product.name}
                             description={product.description}
                             picture={product.picture}
