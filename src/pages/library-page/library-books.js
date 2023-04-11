@@ -4,69 +4,85 @@ import { GamesPage } from "../library/games/games-page";
 import { NonVerbalPage } from "../library/non-verbal/non-verbal-page";
 import { TechnologyPage } from "../library/technology/technology-page";
 
+export const LibraryCategories = {
+    SERVICES: "Services",
+    CULTURAL_PLACES: "Lieux culturels",
+    EXCHANGES: "Échanges",
+    GAMES: "Jeux",
+    TECHNOLOGY: "Technologies",
+    EDUCATION: "Education",
+    WRITINGS: "Écrits",
+    PROFESSIONS: "Professions",
+    TOOLS: "Outils",
+    VERBAL: "Verbale",
+    SOCIAL_NETWORKS: "Réseaux sociaux",
+    NON_VERBAL: "Non verbale",
+    VISUAL_COMMUNICATION: "Communication visuelle",
+}
+
 export const libraryBooks = [
     {
-        title: "Services",
+        title: LibraryCategories.SERVICES,
         url: "services",
         page: null,
     },
     {
-        title: "Lieux culturels",
+        title: LibraryCategories.CULTURAL_PLACES,
         url: "lieux-culturels",
         page: <CulturalPlacePage/>,
     },
     {
-        title: "Échanges",
-        url: "echanges",
+        title: LibraryCategories.EXCHANGES,
+        url: "echangfffes",
         page: <ExchangesPage/>,
     },
     {
-        title: "Jeux",
+        title: LibraryCategories.GAMES,
         url: "jeux",
         page: <GamesPage/>,
     },
     {
-        title: "Technologies",
+        title: LibraryCategories.TECHNOLOGY,
         url: "technologies",
         page: <TechnologyPage/>,
     },
     {
-        title: "Education",
+        title: LibraryCategories.EDUCATION,
         url: "education",
         page: null,
     },
     {
-        title: "Écrits",
+        title: LibraryCategories.WRITINGS,
         url: "ecrits",
         page: null,
     },
     {
-        title: "Professions",
+        title: LibraryCategories.PROFESSIONS,
         url: "professions",
         page: null,
     },
     {
-        title: "Outils",
+        title: LibraryCategories.TOOLS,
         url: "outils",
         page: null,
     },
     {
-        title: "Verbale",
+        title: LibraryCategories.VERBAL,
         url: "verbale",
         page: null,
     },
     {
-        title: "Réseaux sociaux",
+        title: LibraryCategories.SOCIAL_NETWORKS,
         url: "reseaux-sociaux",
         page: null,
     },
     {
-        title: "Non verbale",
+        title: LibraryCategories.NON_VERBAL,
         url: "non-verbale",
         page: <NonVerbalPage/>,
     },
     {
-        title: "Communication visuelle",
+        title: LibraryCategories.VISUAL_COMMUNICATION,
         url: "communication-visuelle",
         page: null,
     }

@@ -16,14 +16,12 @@ export default function CalendarChat({ selectedDate }) {
     useEffect(() => {
         const newMessageRef = collection(db, `calendar-chat-${selectedDate}-12-23`)
         setMessageRef(newMessageRef);
-        console.log("date changed")
     }, [selectedDate, db]);
 
     useEffect(() => {
         if (!messageRef) return;
         const newQueryRef = query(messageRef, orderBy("createdAt", "asc"), limit(25));
         setQueryRef(newQueryRef);
-        console.log("date changed 2")
     }, [messageRef])
 
 

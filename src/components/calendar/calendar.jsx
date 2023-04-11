@@ -11,9 +11,9 @@ function CalendarTile({monthDay, onDateClick}) {
 export default function Calendar({ onDateClick }) {
     return (
         <div className="stendig flex font-helvetica">
-                <div className='text-3xl gap-7'>
-                    <h2 className="year writing-vertical-rl rotate-180">2023</h2>
-                    <h2 className="month writing-vertical-rl rotate-180">December</h2>
+                <div className='text-3xl flex flex-col gap-5'>
+                    <h2 className="writing-vertical-rl rotate-180">2023</h2>
+                    <h2 className="writing-vertical-rl rotate-180">December</h2>
                 </div>
                 <table>
                     <thead>

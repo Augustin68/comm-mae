@@ -22,6 +22,7 @@
   src: url("./assets/fonts/Helvetica_Neue_Regular.otf");
 }
 
+
 @layer base {
   .themeOne {
     --color-text-base: #112a46;
