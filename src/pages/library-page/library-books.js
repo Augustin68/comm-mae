@@ -1,9 +1,3 @@
-import { CulturalPlacePage } from "../library/cultural-places/cultural-place-page";
-import { ExchangesPage } from "../library/exchanges/exchanges-page";
-import { GamesPage } from "../library/games/games-page";
-import { NonVerbalPage } from "../library/non-verbal/non-verbal-page";
-import { TechnologyPage } from "../library/technology/technology-page";
-
 export const LibraryCategories = {
     SERVICES: "Services",
     CULTURAL_PLACES: "Lieux culturels",
